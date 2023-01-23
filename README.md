@@ -26,3 +26,18 @@
     * __min__ - the minimum floating point value to compare against;
     * __max__ - the maximum floating point value to compare against.
 * Returns float (the float result between the minimum and maximum values).
+## foreach Loop
+#### for loop
+```
+for(int i = 0; i < parent.childCount; i++)
+{
+    // do stuff
+}
+```
+#### foreach loop
+```
+foreach(type child in parent)
+{
+    // do stuff
+}
+```
