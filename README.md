@@ -26,8 +26,9 @@
     * __min__ - the minimum floating point value to compare against;
     * __max__ - the maximum floating point value to compare against.
 * Returns float (the float result between the minimum and maximum values).
-## foreach Loop
+## Types of Loop
 #### for loop
+Runs a set number of times.
 ```
 for(int i = 0; i < parent.childCount; i++)
 {
@@ -35,9 +36,27 @@ for(int i = 0; i < parent.childCount; i++)
 }
 ```
 #### foreach loop
+Works the same as a for loop but doesn't track the iterator.
 ```
 foreach(type child in parent)
 {
     // do stuff
 }
+```
+#### while loop
+Runs continuously while some condition is true.
+```
+while(condition == true)
+{
+    // do stuff
+}
+```
+#### do-while loop
+Runs once and then continuously repeats while some condition is true.
+```
+do
+{
+    // stuff
+}
+while(condition == true);
 ```
