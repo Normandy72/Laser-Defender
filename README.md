@@ -11,7 +11,10 @@
          |          |
     (0,0)|__________|(1,0)
 ```
-
+## Parallax Scrolling
+* Multiple image layers scrolling at different speeds.
+* Gives an artificial sense of depth.
+* More layers give more depth.
 ***
 # ~ C# ~
 ## Mathf.Clamp(float value, float min, float max)
