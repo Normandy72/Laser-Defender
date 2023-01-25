@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float timeBetweenWaves = 0f;
     [SerializeField] bool isLooping;
     WaveConfigSO currentWave;
+
     void Start()
     {
         StartCoroutine(SpawnEnemyWaves());
