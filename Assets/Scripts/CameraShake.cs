@@ -6,6 +6,7 @@ public class CameraShake : MonoBehaviour
 {
     [SerializeField] float shakeDuration = 1f;
     [SerializeField] float shakeMagnitude = 0.5f;
+
     Vector3 initialPosition;
 
     void Start()
@@ -29,4 +30,5 @@ public class CameraShake : MonoBehaviour
         }
         transform.position = initialPosition;
     }
+
 }

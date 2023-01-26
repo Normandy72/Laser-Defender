@@ -40,7 +40,7 @@ public class Shooter : MonoBehaviour
 
     void Fire()
     {
-        if(isFiring && firingCoroutine == null)
+        if (isFiring && firingCoroutine == null)
         {
             firingCoroutine = StartCoroutine(FireContinuously());
         }
@@ -48,14 +48,17 @@ public class Shooter : MonoBehaviour
         {
             StopCoroutine(firingCoroutine);
             firingCoroutine = null;
-        }        
+        }
     }
 
     IEnumerator FireContinuously()
     {
         while(true)
         {
-            GameObject instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            GameObject instance = Instantiate(projectilePrefab, 
+                                            transform.position, 
+                                            Quaternion.identity);
+
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
             if(rb != null)
             {
@@ -64,9 +67,8 @@ public class Shooter : MonoBehaviour
 
             Destroy(instance, projectileLifetime);
 
-            float timeToNextProjectile = Random.Range(baseFiringRate - firingRateVariance, 
-                                                      baseFiringRate + firingRateVariance);
-
+            float timeToNextProjectile = Random.Range(baseFiringRate - firingRateVariance,
+                                            baseFiringRate + firingRateVariance);
             timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFiringRate, float.MaxValue);
 
             audioPlayer.PlayShootingClip();
