@@ -15,6 +15,11 @@
 * Multiple image layers scrolling at different speeds.
 * Gives an artificial sense of depth.
 * More layers give more depth.
+
+## Audio in Three Parts
+1. __Audio Listener__ - to "hear" the audio.
+2. __Audio Source__ - to "play" the audio.
+3. __Audio File__ - the "sounds" that get played.
 ***
 # ~ C# ~
 ## Mathf.Clamp(float value, float min, float max)
